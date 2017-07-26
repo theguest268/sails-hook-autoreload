@@ -149,9 +149,9 @@ module.exports = function(sails) {
               sails.hooks.blueprints.bindShadowRoutes();
             }
 
-            var extendMethod = sails.config[self.configKey].extend;
-            if (extendMethod && _.isFunction(extendMethod)) {
-              extendMethod(sails);
+            var onComplete = sails.config[self.configKey].onComplete;
+            if (onComplete && _.isFunction(onComplete)) {
+              onComplete(sails);
             }
           });
 

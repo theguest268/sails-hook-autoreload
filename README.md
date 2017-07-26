@@ -55,7 +55,11 @@ module.exports.autoreload = {
   ignored: [
     // Ignore all files with .ts extension
     "**.ts"
-  ]
+  ],
+
+  onComplete: function(sails) {
+    // Do something
+  }
 };
 
 ```
