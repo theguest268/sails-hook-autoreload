@@ -43,6 +43,8 @@ module.exports = function(sails) {
     },
 
     configure: function() {
+      this.configKey = 'autoreload';
+      
       sails.config[this.configKey].active = 
         // If an explicit value for the "active" config option is set, use it
         (typeof sails.config[this.configKey].active !== 'undefined') ? 
